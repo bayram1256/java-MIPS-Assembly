@@ -1,0 +1,17 @@
+.text
+label1:	sub	$15,$1,$10
+	blez	$15,label1
+label3:	addi	$8,$7,-1234
+	andi	$3,$7,127
+	beq	$8,$10,label2
+	srlv	$8,$8,$14
+	lw	$10,4($7)
+	bne     $4,$6,label3
+	j	last  
+label2:	and	$13,$12,$13
+	sw	$10,4($7)
+	or 	$10,$9,$8	
+	srl	$11,$12,5
+	srlv	$8,$8,$14
+last:	sll   	$17,$18,4
+

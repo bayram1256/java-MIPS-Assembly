@@ -1,0 +1,19 @@
+.text
+again:	add	$11,$12,$13
+	blez	$10,again
+first:	sub	$8,$7,$5
+show:	addi	$8,$7,-1234
+	andi	$3,$7,127
+	beq	$8,$10,show
+	sw	$10,4($7)
+	bne     $4,$6,x1
+	j	again    
+	and	$13,$12,$13
+	lw	$19,8($12)
+	or 	$10,$9,$8	
+	srl	$11,$12,5
+	sllv	$14,$12,$8
+	srlv	$8,$8,$14
+x1:	sll   	$17,$18,4
+
+
